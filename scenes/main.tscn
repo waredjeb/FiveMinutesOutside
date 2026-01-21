@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm6lwcvu4yo2e"]
+
+[ext_resource type="PackedScene" uid="uid://dtju5dg7ch7es" path="res://scenes/level.tscn" id="2_0wfyh"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Level" parent="." instance=ExtResource("2_0wfyh")]
+y_sort_enabled = true
+position = Vector2(160, 76)

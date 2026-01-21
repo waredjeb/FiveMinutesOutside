@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WindowTheme" load_steps=6 format=3 uid="uid://cs2kh2smrq0dw"]
+
+[ext_resource type="Script" uid="uid://i1f0qpmgme3k" path="res://scripts/windows/themes/window_theme.gd" id="1_068hu"]
+[ext_resource type="Texture2D" uid="uid://dses16b22kya4" path="res://assets/PopUps/Close_button_idle_16x16.png" id="1_a505j"]
+[ext_resource type="Texture2D" uid="uid://bronqvhtnjek" path="res://assets/PopUps/Close_button_pressed_16x16.png" id="2_0igyp"]
+[ext_resource type="Texture2D" uid="uid://wxym1pgfwqvf" path="res://assets/PopUps/RecWindows_160_92.png" id="3_hjcsj"]
+[ext_resource type="Texture2D" uid="uid://f3hnxndxt6uc" path="res://assets/PopUps/Titlebar_92x16.png" id="5_mwid5"]
+
+[resource]
+script = ExtResource("1_068hu")
+frame_texture = ExtResource("3_hjcsj")
+title_bar_texture = ExtResource("5_mwid5")
+close_button_normal = ExtResource("1_a505j")
+close_button_pressed = ExtResource("2_0igyp")
+metadata/_custom_type_script = "uid://i1f0qpmgme3k"

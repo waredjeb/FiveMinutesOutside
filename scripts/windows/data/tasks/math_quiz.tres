@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaskData" load_steps=2 format=3 uid="uid://b5ouy3pkdidxw"]
+
+[ext_resource type="Script" uid="uid://bue8vfy4wubbe" path="res://scripts/windows/data/task_data.gd" id="1_mjnf8"]
+
+[resource]
+script = ExtResource("1_mjnf8")
+task_id = "math_quiz"
+prompt = "What is 2+2 ?"
+hint = "Type a number"
+correct_answer = "4"
+metadata/_custom_type_script = "uid://bue8vfy4wubbe"
