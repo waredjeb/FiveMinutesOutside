@@ -51,7 +51,10 @@ func _build_input_ui() -> void:
 			_create_choice_buttons()
 
 func _create_text_input() -> void:
+	var custom_font = load("res://fonts/m5x7.ttf")
 	var line_edit = LineEdit.new()
+	line_edit.add_theme_font_override("font", custom_font)
+	line_edit.add_theme_font_size_override("font_size", 24)
 	line_edit.placeholder_text = task_data.hint
 	line_edit.custom_minimum_size = Vector2(300, 40)
 	line_edit.alignment = HORIZONTAL_ALIGNMENT_CENTER

@@ -23,7 +23,7 @@ func show_task(task_data: TaskData, theme: WindowTheme = null) -> BaseWindow:
 	canvas_layer.add_child(window)
 	await get_tree().process_frame
 
-	window.set_title(task_data.task_id)
+	window.set_title(task_data.title)
 
 	var content = TASK_CONTENT.instantiate()
 	window.set_content(content)

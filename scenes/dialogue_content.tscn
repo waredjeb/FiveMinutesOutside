@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bolv8t4xipjc0"]
+[gd_scene load_steps=3 format=3 uid="uid://bolv8t4xipjc0"]
 
 [ext_resource type="Script" uid="uid://112pv5fbkmnh" path="res://scripts/windows/content/dialogue_content.gd" id="1_qk10r"]
+[ext_resource type="FontFile" uid="uid://dry3bqfjis4wm" path="res://fonts/m5x7.ttf" id="2_7p5dw"]
 
 [node name="DialogueContent" type="VBoxContainer"]
-layout_mode = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -20,18 +20,23 @@ custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="SpeakerArea"]
+[node name="HBoxContainer" type="HBoxContainer" parent="SpeakerArea"]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="SpeakerLabel" type="Label" parent="SpeakerArea/VBoxContainer"]
+[node name="SpeakerLabel" type="Label" parent="SpeakerArea/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.69538486, 0.6850442, 1.1551381e-06, 1)
-theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7p5dw")
+theme_override_font_sizes/font_size = 32
 
-[node name="TextLabel" type="RichTextLabel" parent="SpeakerArea/VBoxContainer"]
+[node name="TextLabel" type="RichTextLabel" parent="SpeakerArea/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("2_7p5dw")
+theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 fit_content = true
 

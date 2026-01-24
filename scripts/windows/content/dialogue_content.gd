@@ -4,6 +4,7 @@ class_name DialogueContent
 
 @onready var portrait: TextureRect = %Portrait
 @onready var speaker_label: Label = %SpeakerLabel
+@onready var speaker_container : HBoxContainer = $SpeakerArea/HBoxContainer
 @onready var text_label: RichTextLabel = %TextLabel
 @onready var choices_container: VBoxContainer = %ChoicesContainer
 @onready var continue_button: Button = %ContinueButton
@@ -12,6 +13,9 @@ var dialogue_data: DialogueData
 var current_line_index := 0
 
 func setup(data: Resource) -> void:
+	$".".custom_minimum_size = Vector2(400, 300)
+	speaker_label.custom_minimum_size = Vector2(100, custom_minimum_size.y)
+	speaker_container.custom_minimum_size = $".".custom_minimum_size
 	dialogue_data = data as DialogueData
 	_display_line(0)
 	continue_button.pressed.connect(_on_continue)

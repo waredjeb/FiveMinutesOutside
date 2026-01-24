@@ -38,7 +38,6 @@ func set_content(content: WindowContent) -> void:
 	if content_plugin:
 		#queue free --> safe destroying the node at the end of the frame
 		content_plugin.queue_free()
-
 	# Add new content
 	content_plugin = content
 	content_container.add_child(content_plugin)

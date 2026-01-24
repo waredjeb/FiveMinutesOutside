@@ -1,9 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5fm63s5hemr8"]
+[gd_scene load_steps=3 format=3 uid="uid://b5fm63s5hemr8"]
 
 [ext_resource type="Script" uid="uid://cmbg4jbltspdj" path="res://scripts/task_content.gd" id="1_7bq1m"]
+[ext_resource type="FontFile" uid="uid://dry3bqfjis4wm" path="res://fonts/m5x7.ttf" id="2_r1285"]
 
 [node name="TaskContent" type="Control"]
-layout_mode = 2
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -35,11 +36,10 @@ custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_r1285")
+theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
-fit_content = false
 scroll_active = false
-clip_contents = true
-autowrap_mode = 3
 
 [node name="InputContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -52,6 +52,8 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_r1285")
+theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 
 [node name="SubmitButton" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -59,4 +61,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_r1285")
+theme_override_font_sizes/font_size = 24
 text = "Submit"

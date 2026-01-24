@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dk2n7os188shm"]
+[gd_scene load_steps=3 format=3 uid="uid://dk2n7os188shm"]
 
 [ext_resource type="Script" uid="uid://db48dfpwhrx77" path="res://scripts/windows/base/base_window.gd" id="1_onvrl"]
+[ext_resource type="FontFile" uid="uid://dry3bqfjis4wm" path="res://fonts/m5x7.ttf" id="2_55mv7"]
 
 [node name="BaseWindow" type="PanelContainer"]
 offset_right = 40.0
@@ -28,6 +29,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_55mv7")
+theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 vertical_alignment = 1
 

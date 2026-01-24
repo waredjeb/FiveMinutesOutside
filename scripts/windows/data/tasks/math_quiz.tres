@@ -4,8 +4,9 @@
 
 [resource]
 script = ExtResource("1_mjnf8")
-task_id = "math_quiz"
+task_id = "MathQuiz"
 prompt = "What is 2+2 ?"
 hint = "Type a number"
+title = "Math Quiz"
 correct_answer = "4"
 metadata/_custom_type_script = "uid://bue8vfy4wubbe"

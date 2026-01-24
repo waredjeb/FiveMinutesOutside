@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_5xswd"]
 script = ExtResource("1_5xswd")
 speaker_name = "Narrator"
-text = "Welcome to the game!"
+text = "Welcome to the game! This is a new game this is a new game this is a new game"
 metadata/_custom_type_script = "uid://5oo0775512ra"
 
 [resource]

@@ -16,6 +16,7 @@ enum Type {
 @export_group("Content")
 @export_multiline var prompt: String
 @export var hint: String = ""
+@export var title: String = ""
 
 @export_group("Typing Task")
 @export var correct_answer: String = ""
