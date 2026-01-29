@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cs1bmf5x41ogx"]
+[gd_scene load_steps=18 format=3 uid="uid://cs1bmf5x41ogx"]
 
 [ext_resource type="Texture2D" uid="uid://dxeejfllt2k03" path="res://assets/Charachter/16x16/16x16 Walk-Sheet.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://nkqq0uj7scf5" path="res://scripts/player.gd" id="1_g2els"]
@@ -108,7 +108,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
 scale = Vector2(3, 3)
 script = ExtResource("1_g2els")
@@ -126,3 +128,9 @@ animation = &"walk_up"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0.33333334, 0)
 zoom = Vector2(1.5, 1.5)
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_g2els")

@@ -1,7 +1,23 @@
 extends CharacterBody2D
-
 @export var speed: float = 400.0
 
+signal interaction_available
+signal interaction_unavailable
+
+@onready var interaction_area = $InteractionArea
+
+func _ready() -> void:
+	interaction_area.area_entered.connect(_on_entered_area)
+	interaction_area.area_exited.connect(_on_exited_area)
+	
+func _on_entered_area(area: Area2D) -> void:
+	interaction_available.emit()
+	return
+	
+func _on_exited_area(area: Area2D) -> void:
+	interaction_unavailable.emit()
+	return
+	
 func _physics_process(_delta: float) -> void:
 	# 1. Read input (simplified with Input.get_vector)
 	var input_dir := Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://7bhfk0q12qqn"]
+
+[ext_resource type="Texture2D" uid="uid://basmev4uallg6" path="res://assets/PopUps/Error_16_16.png" id="1_lrqrk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14d2i"]
+
+[node name="Sign" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_14d2i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lrqrk")

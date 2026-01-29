@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://dtju5dg7ch7es"]
+[gd_scene load_steps=20 format=4 uid="uid://dtju5dg7ch7es"]
 
 [ext_resource type="Script" uid="uid://dwt6gefbe22h3" path="res://scripts/level.gd" id="1_klq6b"]
 [ext_resource type="Texture2D" uid="uid://d2if1nffgyvy5" path="res://assets/5_Modern_Office_RPG_MAKER_MV/Modern_Office_MV_Walls_TILESET_A4.png" id="1_w7c3h"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://rt2poav33332" path="res://assets/5_Modern_Office_RPG_MAKER_MV/Modern_Office_MV_1_TILESETS_B-C-D-E.png" id="3_2r41h"]
 [ext_resource type="Texture2D" uid="uid://drdprnbu8caqs" path="res://assets/5_Modern_Office_RPG_MAKER_MV/Modern_Office_MV_Floors_TILESET_A2.png" id="3_mx8sn"]
 [ext_resource type="Texture2D" uid="uid://b5acij0uunfak" path="res://assets/5_Modern_Office_RPG_MAKER_MV/Modern_Office_MV_2_TILESETS_B-C-D-E.png" id="4_klq6b"]
-[ext_resource type="PackedScene" uid="uid://7bhfk0q12qqn" path="res://scenes/interactable/sign.tscn" id="8_b121j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8frs"]
 texture = ExtResource("1_w7c3h")
@@ -8700,6 +8699,3 @@ tile_set = SubResource("TileSet_t1rx8")
 [node name="Player" parent="." instance=ExtResource("2_w7c3h")]
 position = Vector2(244, 217)
 scale = Vector2(1, 1)
-
-[node name="Sign" parent="." instance=ExtResource("8_b121j")]
-position = Vector2(117, 221)

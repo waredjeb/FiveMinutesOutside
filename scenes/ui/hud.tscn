@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://3scolq2bcbdn"]
+
+[ext_resource type="Script" uid="uid://4e7b70ik1k8" path="res://scenes/ui/hud.gd" id="1_0mwgc"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_0mwgc")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InteractPrompt" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 523.0
+offset_top = 533.0
+offset_right = 578.0
+offset_bottom = 556.0
+text = "Press E"

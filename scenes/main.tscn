@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bm6lwcvu4yo2e"]
+[gd_scene load_steps=3 format=3 uid="uid://bm6lwcvu4yo2e"]
 
-[ext_resource type="PackedScene" uid="uid://dtju5dg7ch7es" path="res://scenes/level.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://dtju5dg7ch7es" path="res://level.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://3scolq2bcbdn" path="res://scenes/ui/hud.tscn" id="2_sugp2"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Level" parent="." instance=ExtResource("2_0wfyh")]
 y_sort_enabled = true
 position = Vector2(160, 76)
+
+[node name="HUD" parent="." instance=ExtResource("2_sugp2")]
