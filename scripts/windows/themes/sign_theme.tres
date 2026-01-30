@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WindowTheme" load_steps=2 format=3 uid="uid://c4nusumbun1gg"]
+
+[ext_resource type="Script" uid="uid://i1f0qpmgme3k" path="res://scripts/windows/themes/window_theme.gd" id="1_heyjp"]
+
+[resource]
+script = ExtResource("1_heyjp")
+default_width = 100
+min_height = 100
+max_height = 100
+metadata/_custom_type_script = "uid://i1f0qpmgme3k"

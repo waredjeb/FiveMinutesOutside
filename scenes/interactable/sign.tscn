@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://7bhfk0q12qqn"]
+[gd_scene load_steps=6 format=3 uid="uid://7bhfk0q12qqn"]
 
+[ext_resource type="Script" uid="uid://bl62rnq1wr68r" path="res://scripts/interactable/sign.gd" id="1_h07ii"]
 [ext_resource type="Texture2D" uid="uid://basmev4uallg6" path="res://assets/PopUps/Error_16_16.png" id="1_lrqrk"]
+[ext_resource type="Resource" uid="uid://bdv3odku3e45d" path="res://data/interactables/sign_dialogue.tres" id="2_yro6r"]
+[ext_resource type="Resource" uid="uid://c4nusumbun1gg" path="res://scripts/windows/themes/sign_theme.tres" id="3_2v48w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14d2i"]
 
 [node name="Sign" type="Area2D"]
+script = ExtResource("1_h07ii")
+dialogue = ExtResource("2_yro6r")
+window_theme = ExtResource("3_2v48w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_14d2i")

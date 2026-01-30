@@ -1,21 +1,32 @@
 extends CharacterBody2D
 @export var speed: float = 400.0
-
+var nearby_interactable_area = null
 signal interaction_available
 signal interaction_unavailable
+signal interaction_triggered
 
 @onready var interaction_area = $InteractionArea
 
 func _ready() -> void:
 	interaction_area.area_entered.connect(_on_entered_area)
 	interaction_area.area_exited.connect(_on_exited_area)
-	
+
+func _input(event):
+	if (event.is_action_pressed("interact")):
+		interaction_triggered.emit()
+			
 func _on_entered_area(area: Area2D) -> void:
-	interaction_available.emit()
+	nearby_interactable_area = area
+	if(area.has_method("interact")):
+		interaction_triggered.connect(nearby_interactable_area.interact)
+		interaction_available.emit()
 	return
 	
 func _on_exited_area(area: Area2D) -> void:
-	interaction_unavailable.emit()
+	if(nearby_interactable_area):
+		interaction_triggered.disconnect(nearby_interactable_area.interact)
+		interaction_unavailable.emit()
+	nearby_interactable_area = null	
 	return
 	
 func _physics_process(_delta: float) -> void:
